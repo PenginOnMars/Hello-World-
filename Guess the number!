@@ -1,0 +1,32 @@
+import random
+for x in range(1):
+    number=(random.randint(1,101))
+print("I've picked a random number! Can you guess the number?")
+guess = int(input('Enter your guess : '))
+wrong_guess=1
+if guess == number:
+    print('Congratulations you guessed the number!')
+    print('(but you dont win any prizes!)')
+    print("It took you this many tries")
+    print(wrong_guess+1)
+elif guess<number:
+    print("No it's a little higher than that")
+else:
+    print("No it's a little lower than that.")
+
+while(guess!=number):
+    guess=(int(input('Enter your guess : ')))
+
+    if guess == number:
+        print('Congratulations you guessed the number!')
+        print('(but you dont win any prizes!)')
+        print("It took you this many tries")
+        print(wrong_guess+1)
+    elif guess<number:
+        print("No it's a little higher than that")
+    else:
+        print("No it's a little lower than that.")
+
+    if guess!=number:
+        print("Want to try again?")
+        wrong_guess=wrong_guess+1
